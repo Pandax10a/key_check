@@ -28,8 +28,9 @@ CREATE TABLE `movie` (
   `runtime` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL,
   `director` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
   `release_year` int(10) unsigned DEFAULT NULL,
-  PRIMARY KEY (`id(PK)`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+  PRIMARY KEY (`id(PK)`),
+  UNIQUE KEY `unique_key` (`title`,`director`,`release_year`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-10 14:15:20
+-- Dump completed on 2022-09-10 14:25:30
